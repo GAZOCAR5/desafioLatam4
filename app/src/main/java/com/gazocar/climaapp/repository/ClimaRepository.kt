@@ -13,11 +13,11 @@ class ClimaRepository {
     // 2. Crea una cuenta gratuita
     // 3. Obtén tu API key
     // 4. Reemplaza "TU_API_KEY_AQUI" con tu API key real
-    private val apiKey = "c517284c93acca3669a1cb9471b8a06c"
+    private val apiKey = "TU_API_KEY_AQUI"
 
     suspend fun obtenerClima(ciudad: String): ClimaResponse {
         return try {
-            if (apiKey == "c517284c93acca3669a1cb9471b8a06c") {
+            if (apiKey == "TU_API_KEY_AQUI") {
                 throw Exception("Por favor configura tu API key de OpenWeatherMap")
             }
             api.obtenerClimaActual(ciudad, apiKey)
@@ -28,7 +28,7 @@ class ClimaRepository {
 
     suspend fun obtenerPronostico(ciudad: String): PronosticoResponse {
         return try {
-            if (apiKey == "c517284c93acca3669a1cb9471b8a06c") {
+            if (apiKey == "TU_API_KEY_AQUI") {
                 throw Exception("Por favor configura tu API key de OpenWeatherMap")
             }
             api.obtenerPronostico(ciudad, apiKey)
